@@ -26,6 +26,9 @@ function calculatorCtrl(){
 			case "^":
 				this.result = Math.pow(firstNum, secondNum);
 				break;
+			case "'&radic;'":
+				this.result = 0;
+				break;
 		}
 	};
 };

@@ -9,10 +9,10 @@
 	<body ng-app="myApp">
 		<h1>Basic Calculator.com</h1>
 		<div ng-controller="calculatorCtrl as ctrl">
-			<input type="number" name="number1" ng-model="ctrl.number1">
+			<input type="number" name="number1" ng-model="ctrl.number1" ng-hide="ctrl.operator==='&radic;'">
 			<span ng-bind="ctrl.operator" id="operator" ng-model="ctrl.operator"></span>
 			<input type="number" name="number2" ng-model="ctrl.number2">
-			<button ng-click="ctrl.calculate()" ng-disabled="!ctrl.number1 || !ctrl.number2 || !ctrl.operator">=</button>
+			<button ng-click="ctrl.calculate()" ng-disabled="!ctrl.number2 || !ctrl.operator">=</button>
 			<span ng-bind="ctrl.result"></span>
 			<p>Choose an operator:
 				<button ng-click="ctrl.operatorClick('+')">+</button>
@@ -20,7 +20,7 @@
 				<button ng-click="ctrl.operatorClick('/')">/</button>
 				<button ng-click="ctrl.operatorClick('*')">*</button>
 				<button ng-click="ctrl.operatorClick('^')">^</button>
-<!--				<button ng-click="ctrl.operatorClick('&radic;')" name="sqrtroot">&radic;</button>-->
+				<button ng-click="ctrl.operatorClick('&radic;')" name="sqrtroot">&radic;</button>
 			</p>
 		</div>
 	</body>
