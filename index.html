@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script src="script.js"></script>
+		<title>MyCalculator</title>
+	</head>
+	<body ng-app="myApp">
+		<h1>Basic Calculator.com</h1>
+		<div ng-controller="calculatorCtrl as ctrl">
+			<input type="number" ng-model="ctrl.number1">
+			<span ng-bind="ctrl.operator" id="operator"></span>
+			<input type="number" ng-model="ctrl.number2">
+			<button ng-click="ctrl.calculate()">=</button>
+			<span ng-bind="ctrl.result"></span>
+			<p>Choose an operator:
+				<button ng-click="ctrl.operatorClick('+')">+</button>
+				<button ng-click="ctrl.operatorClick('-')">-</button>
+				<button ng-click="ctrl.operatorClick('/')">/</button>
+				<button ng-click="ctrl.operatorClick('*')">*</button>
+			</p>
+		</div>
+	</body>
+</html>
