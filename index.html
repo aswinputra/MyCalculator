@@ -10,9 +10,9 @@
 		<h1>Basic Calculator.com</h1>
 		<div ng-controller="calculatorCtrl as ctrl">
 			<input type="number" name="number1" ng-model="ctrl.number1">
-			<span ng-bind="ctrl.operator" id="operator"></span>
+			<span ng-bind="ctrl.operator" id="operator" ng-model="ctrl.operator"></span>
 			<input type="number" name="number2" ng-model="ctrl.number2">
-			<button ng-click="ctrl.calculate()" ng-disabled="!ctrl.number1 || !ctrl.number2">=</button>
+			<button ng-click="ctrl.calculate()" ng-disabled="!ctrl.number1 || !ctrl.number2 || !ctrl.operator">=</button>
 			<span ng-bind="ctrl.result"></span>
 			<p>Choose an operator:
 				<button ng-click="ctrl.operatorClick('+')">+</button>
