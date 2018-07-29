@@ -10,17 +10,23 @@ function calculatorCtrl(){
 		var firstNum = parseFloat(this.number1);
 		var secondNum = parseFloat(this.number2);
 		switch(this.operator){
-			case '+':
+			case "+":
 				this.result = firstNum + secondNum;
 				break;
-			case '-':
+			case "-":
 				this.result = firstNum - secondNum;
 				break;
-			case '/':
+			case "/":
 				this.result = firstNum / secondNum;
 				break;
-			case '*':
+			case "*":
 				this.result = firstNum * secondNum;
+				break;
+			case "^":
+				this.result = Math.pow(firstNum, secondNum);
+				break;
+			case "&radic;":
+				this.result = Math.sqrt(firstNum);
 				break;
 		}
 	};
