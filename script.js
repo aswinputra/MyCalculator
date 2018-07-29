@@ -3,6 +3,7 @@ app.controller("calculatorCtrl", calculatorCtrl);
 
 function calculatorCtrl(){
 	this.result = 0;
+	
 	this.operatorClick = function(button){
 		this.operator = button;
 	};
@@ -24,9 +25,6 @@ function calculatorCtrl(){
 				break;
 			case "^":
 				this.result = Math.pow(firstNum, secondNum);
-				break;
-			case "&radic;":
-				this.result = Math.sqrt(firstNum);
 				break;
 		}
 	};
