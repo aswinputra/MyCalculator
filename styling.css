@@ -1,0 +1,92 @@
+body{
+	text-align: left;
+	background-color: lightblue;
+}
+.left-box{
+	display: block;
+	float: left;
+}
+.text-number1{
+	width:150px;
+	display: inline-block;
+	text-align: center;
+}
+.number1{
+	display: block;
+	width: 145px;
+	font-family: Digital7;
+	font-size: 1em;
+}
+.mid-box{
+	float: left;
+}
+.text-operator{
+	width: 70px;
+	display: inline-block;
+	text-align: center;
+}
+.operator{
+	display: block;
+	width:70px;
+	font-family: Digital7;
+	font-size: 1em;
+	text-align: center;
+	margin-top: 5px;
+}
+.right-box{
+	float:left;
+}
+.text-number2{
+	width: 150px;
+	display: inline-block;
+	text-align: center;
+}
+.number2{
+	display: block;
+	width: 145px;
+	font-family: Digital7;
+	font-size: 1em;
+}
+.calculate{
+	display: inline-block;
+	width:20px;
+	height:20px;
+	font-family: Digital7;
+	font-size: 1em;
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.result{
+	font-family: Digital7;
+	font-size: 1em;
+	display: inline-block;
+}
+.operator-plus{
+	font-family: Digital7;
+	font-size: 1em;
+}
+.operator-min{
+	font-family: Digital7;
+	font-size: 1em;
+}
+.operator-dev{
+	font-family: Digital7;
+	font-size: 1em;
+}
+.operator-times{
+	font-family: Digital7;
+	font-size: 1em;
+}
+.operator-power{
+	font-family: Digital7;
+	font-size: 1em;
+}
+.operator-sqrtroot{
+	font-family: Digital7;
+	font-size: 1em;
+}
+@font-face{
+	font-family: Digital7;
+	src: url(digital_7/digital-7.ttf);
+}

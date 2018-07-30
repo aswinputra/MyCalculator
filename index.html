@@ -4,24 +4,37 @@
 		<meta charset="utf-8"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 		<script src="script.js"></script>
+		<link rel="stylesheet" type="text/css" href="styling.css" />
 		<title>MyCalculator</title>
 	</head>
 	<body ng-app="myApp">
 		<h1>Basic Calculator.com</h1>
-		<div ng-controller="calculatorCtrl as ctrl">
-			<input type="number" name="number1" ng-model="ctrl.number1" ng-hide="ctrl.operator==='&radic;'">
-			<span ng-bind="ctrl.operator" id="operator" ng-model="ctrl.operator"></span>
-			<input type="number" name="number2" ng-model="ctrl.number2">
-			<button ng-click="ctrl.calculate()" ng-disabled="!ctrl.number2 || !ctrl.operator">=</button>
-			<span ng-bind="ctrl.result"></span>
-			<p>Choose an operator:
-				<button ng-click="ctrl.operatorClick('+')">+</button>
-				<button ng-click="ctrl.operatorClick('-')">-</button>
-				<button ng-click="ctrl.operatorClick('/')">/</button>
-				<button ng-click="ctrl.operatorClick('*')">*</button>
-				<button ng-click="ctrl.operatorClick('^')">^</button>
-				<button ng-click="ctrl.operatorClick('&radic;')" name="sqrtroot">&radic;</button>
+		<form name="calculator" ng-controller="calculatorCtrl as ctrl">
+		<div>
+			<div class="left-box">
+				<span class="text-number1" ng-model="textNumber1" ng-hide="ctrl.operator==='Square root of '">Enter a number</span>
+				<input type="number" class="number1" ng-model="ctrl.number1" ng-hide="ctrl.operator==='Square root of '" ng-pattern="^[0-9]+[.]?[0-9]*$" name="input1">
+			</div>
+			<div class="mid-box">
+				<span class="text-operator" ng-model="textOperator" ng-hide="ctrl.operator==='Square root of '">Operator</span>
+				<span ng-bind="ctrl.operator" class="operator" ng-model="ctrl.operator"></span>
+				
+			</div>
+			<div class="right-box">
+				<span class="text-number2" ng-model="textNumber2">Enter another number</span>
+				<input type="number" class="number2" ng-model="ctrl.number2" ng-pattern="^[0-9]+[.]?[0-9]*$" name="input2">
+			</div>
+			<button ng-click="ctrl.calculate()" ng-disabled="!ctrl.number2 || !ctrl.operator || calculator.input1.$invalid || calculator.input2.$invalid" ng-model="ctrl.equal" class="calculate">=</button>
+			<span ng-bind="ctrl.result" class="result"></span>
+			<p class="choose-operator">Choose an operator:
+				<button ng-click="ctrl.operatorClick('+')" class="operator-plus">+</button>
+				<button ng-click="ctrl.operatorClick('-')" class="operator-min">-</button>
+				<button ng-click="ctrl.operatorClick('/')" class="operator-dev">/</button>
+				<button ng-click="ctrl.operatorClick('*')" class="operator-times">*</button>
+				<button ng-click="ctrl.operatorClick('^')" class="operator-power">^</button>
+				<button ng-click="ctrl.operatorClick('Square root')" class="operator-sqrtroot">Square root</button>
 			</p>
 		</div>
+		</form>
 	</body>
 </html>
