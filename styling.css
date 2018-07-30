@@ -3,7 +3,7 @@ body{
 	background-color: lightblue;
 }
 .calculator{
-	width: 560px;
+	width: 600px;
 	border-style:double;
 	border-width: 1px;
 	border-color: black;
@@ -62,13 +62,27 @@ body{
 	margin-top: 15px;
 	margin-left: 10px;
 	margin-right: 10px;
+	float: left;
+}
+.end-box{
+	float:left;
+}
+.text-result{
+	width:100px;
+	display: inline-block;
+	text-align: center;
 }
 .result{
 	font-family: Digital7;
 	font-size: 2em;
-	display: inline-block;
+	display: block;
+	background: white;
+	width: 100px;
 }
 .bottom-box{
+	overflow: hidden;
+	margin-top: 50px;
+	clear: left;
 	text-align: center;
 }
 .operator-plus{

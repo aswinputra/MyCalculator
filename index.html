@@ -47,8 +47,11 @@
 									 || calculator.input1.$invalid 
 									 || calculator.input2.$invalid" 
 						class="calculate">=</button>
-				<span ng-bind="ctrl.result" 
-					  class="result"></span>
+				<div class="end-box">
+					<span class="text-result">Result</span>
+					<span ng-bind="ctrl.result" 
+					  	class="result"></span>
+				</div>
 				<div class="bottom-box">
 					<p class="choose-operator">Choose an operator:</p>
 					<button ng-click="ctrl.operatorClick('+')" 
