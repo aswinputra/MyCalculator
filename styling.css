@@ -2,6 +2,14 @@ body{
 	text-align: left;
 	background-color: lightblue;
 }
+.calculator{
+	width: 560px;
+	border-style:double;
+	border-width: 1px;
+	border-color: black;
+	text-align: center;
+	padding:20px;
+}
 .left-box{
 	display: block;
 	float: left;
@@ -15,21 +23,21 @@ body{
 	display: block;
 	width: 145px;
 	font-family: Digital7;
-	font-size: 1em;
+	font-size: 2em;
 }
 .mid-box{
 	float: left;
 }
 .text-operator{
-	width: 70px;
+	width: 100px;
 	display: inline-block;
 	text-align: center;
 }
 .operator{
 	display: block;
-	width:70px;
+	width:100px;
 	font-family: Digital7;
-	font-size: 1em;
+	font-size: 2em;
 	text-align: center;
 	margin-top: 5px;
 }
@@ -45,46 +53,47 @@ body{
 	display: block;
 	width: 145px;
 	font-family: Digital7;
-	font-size: 1em;
+	font-size: 2em;
 }
 .calculate{
 	display: inline-block;
-	width:20px;
-	height:20px;
 	font-family: Digital7;
-	font-size: 1em;
+	font-size: 2em;
 	margin-top: 15px;
 	margin-left: 10px;
 	margin-right: 10px;
 }
 .result{
 	font-family: Digital7;
-	font-size: 1em;
+	font-size: 2em;
 	display: inline-block;
+}
+.bottom-box{
+	text-align: center;
 }
 .operator-plus{
 	font-family: Digital7;
-	font-size: 1em;
+	font-size: 2em;
 }
 .operator-min{
 	font-family: Digital7;
-	font-size: 1em;
+	font-size: 2em;
 }
 .operator-dev{
 	font-family: Digital7;
-	font-size: 1em;
+	font-size: 2em;
 }
 .operator-times{
 	font-family: Digital7;
-	font-size: 1em;
+	font-size: 2em;
 }
 .operator-power{
 	font-family: Digital7;
-	font-size: 1em;
+	font-size: 2em;
 }
 .operator-sqrtroot{
 	font-family: Digital7;
-	font-size: 1em;
+	font-size: 2em;
 }
 @font-face{
 	font-family: Digital7;
