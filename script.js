@@ -20,19 +20,19 @@ function calculatorCtrl(){
 				if(isNaN(firstNum)){
 					firstNum = 0;
 				}
-				this.result = firstNum + secondNum;
+				this.result = (firstNum + secondNum);
 				break;
 			case "-":
 				if(isNaN(firstNum)){
 					firstNum = 0;
 				}
-				this.result = firstNum - secondNum;
+				this.result = (firstNum - secondNum);
 				break;
 			case "/":
 				if(isNaN(firstNum)){
 					firstNum = 0;
 				}
-				this.result = firstNum / secondNum;
+				this.result = (firstNum / secondNum);
 				break;
 			case "*":
 				if(isNaN(firstNum)){
@@ -47,7 +47,7 @@ function calculatorCtrl(){
 				this.result = Math.pow(firstNum, secondNum);
 				break;
 			case "Square root of ":
-				this.result = Math.sqrt(secondNum).toFixed(5);
+				this.result = (Math.sqrt(secondNum).toFixed(2));
 				break;
 		}
 	};
