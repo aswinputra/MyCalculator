@@ -47,7 +47,7 @@ function calculatorCtrl(){
 				this.result = Math.pow(firstNum, secondNum);
 				break;
 			case "Square root of ":
-				this.result = Math.sqrt(secondNum);
+				this.result = Math.sqrt(secondNum).toFixed(5);
 				break;
 		}
 	};
