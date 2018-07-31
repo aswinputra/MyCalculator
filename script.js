@@ -17,18 +17,33 @@ function calculatorCtrl(){
 		var secondNum = parseFloat(this.number2);
 		switch(this.operator){
 			case "+":
+				if(isNaN(firstNum)){
+					firstNum = 0;
+				}
 				this.result = firstNum + secondNum;
 				break;
 			case "-":
+				if(isNaN(firstNum)){
+					firstNum = 0;
+				}
 				this.result = firstNum - secondNum;
 				break;
 			case "/":
+				if(isNaN(firstNum)){
+					firstNum = 0;
+				}
 				this.result = firstNum / secondNum;
 				break;
 			case "*":
+				if(isNaN(firstNum)){
+					firstNum = 0;
+				}
 				this.result = firstNum * secondNum;
 				break;
 			case "^":
+				if(isNaN(firstNum)){
+					firstNum = 0;
+				}
 				this.result = Math.pow(firstNum, secondNum);
 				break;
 			case "Square root of ":
